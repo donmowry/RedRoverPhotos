@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F60520D427DE502700F3A5EA /* RedRoverPhotosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60520D327DE502700F3A5EA /* RedRoverPhotosApp.swift */; };
+		F60520D627DE502700F3A5EA /* RoverListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60520D527DE502700F3A5EA /* RoverListView.swift */; };
+		F60520D827DE502900F3A5EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F60520D727DE502900F3A5EA /* Assets.xcassets */; };
+		F60520DB27DE502900F3A5EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F60520DA27DE502900F3A5EA /* Preview Assets.xcassets */; };
+		F60520E527DE502900F3A5EA /* RedRoverPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60520E427DE502900F3A5EA /* RedRoverPhotosTests.swift */; };
+		F60520EF27DE502900F3A5EA /* RedRoverPhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60520EE27DE502900F3A5EA /* RedRoverPhotosUITests.swift */; };
+		F60520F127DE502900F3A5EA /* RedRoverPhotosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60520F027DE502900F3A5EA /* RedRoverPhotosUITestsLaunchTests.swift */; };
+		F605210027DE512400F3A5EA /* RedRoverAPI in Frameworks */ = {isa = PBXBuildFile; productRef = F60520FF27DE512400F3A5EA /* RedRoverAPI */; };
+		F605210827DEE7AF00F3A5EA /* RoverViewListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F605210727DEE7AF00F3A5EA /* RoverViewListViewModel.swift */; };
+		F605210A27DEE7C000F3A5EA /* RoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F605210927DEE7C000F3A5EA /* RoverViewModel.swift */; };
+		F605210C27DEE7E600F3A5EA /* CameraPhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F605210B27DEE7E600F3A5EA /* CameraPhotoListViewModel.swift */; };
+		F605210F27DEEC3000F3A5EA /* Rovers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F605210E27DEEC3000F3A5EA /* Rovers.swift */; };
+		F605211127DEEDDF00F3A5EA /* RoverRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F605211027DEEDDF00F3A5EA /* RoverRowView.swift */; };
+		F605211327DEF90100F3A5EA /* RedRoverAPIClient+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F605211227DEF90100F3A5EA /* RedRoverAPIClient+Creation.swift */; };
+		F605211527DEFA7C00F3A5EA /* RoverDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F605211427DEFA7C00F3A5EA /* RoverDetailView.swift */; };
+		F605211827DEFF6100F3A5EA /* Cache in Frameworks */ = {isa = PBXBuildFile; productRef = F605211727DEFF6100F3A5EA /* Cache */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F60520E127DE502900F3A5EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F60520C827DE502700F3A5EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60520CF27DE502700F3A5EA;
+			remoteInfo = RedRoverPhotos;
+		};
+		F60520EB27DE502900F3A5EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F60520C827DE502700F3A5EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60520CF27DE502700F3A5EA;
+			remoteInfo = RedRoverPhotos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F60520D027DE502700F3A5EA /* RedRoverPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedRoverPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60520D327DE502700F3A5EA /* RedRoverPhotosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedRoverPhotosApp.swift; sourceTree = "<group>"; };
+		F60520D527DE502700F3A5EA /* RoverListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverListView.swift; sourceTree = "<group>"; };
+		F60520D727DE502900F3A5EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F60520DA27DE502900F3A5EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F60520E027DE502900F3A5EA /* RedRoverPhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedRoverPhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60520E427DE502900F3A5EA /* RedRoverPhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedRoverPhotosTests.swift; sourceTree = "<group>"; };
+		F60520EA27DE502900F3A5EA /* RedRoverPhotosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedRoverPhotosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60520EE27DE502900F3A5EA /* RedRoverPhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedRoverPhotosUITests.swift; sourceTree = "<group>"; };
+		F60520F027DE502900F3A5EA /* RedRoverPhotosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedRoverPhotosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F60520FD27DE511400F3A5EA /* RedRoverAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RedRoverAPI; sourceTree = "<group>"; };
+		F605210627DEE70900F3A5EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F605210727DEE7AF00F3A5EA /* RoverViewListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverViewListViewModel.swift; sourceTree = "<group>"; };
+		F605210927DEE7C000F3A5EA /* RoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverViewModel.swift; sourceTree = "<group>"; };
+		F605210B27DEE7E600F3A5EA /* CameraPhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoListViewModel.swift; sourceTree = "<group>"; };
+		F605210E27DEEC3000F3A5EA /* Rovers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rovers.swift; sourceTree = "<group>"; };
+		F605211027DEEDDF00F3A5EA /* RoverRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverRowView.swift; sourceTree = "<group>"; };
+		F605211227DEF90100F3A5EA /* RedRoverAPIClient+Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RedRoverAPIClient+Creation.swift"; sourceTree = "<group>"; };
+		F605211427DEFA7C00F3A5EA /* RoverDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F60520CD27DE502700F3A5EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F605210027DE512400F3A5EA /* RedRoverAPI in Frameworks */,
+				F605211827DEFF6100F3A5EA /* Cache in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60520DD27DE502900F3A5EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60520E727DE502900F3A5EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F60520C727DE502700F3A5EA = {
+			isa = PBXGroup;
+			children = (
+				F60520FD27DE511400F3A5EA /* RedRoverAPI */,
+				F60520D227DE502700F3A5EA /* RedRoverPhotos */,
+				F60520E327DE502900F3A5EA /* RedRoverPhotosTests */,
+				F60520ED27DE502900F3A5EA /* RedRoverPhotosUITests */,
+				F60520D127DE502700F3A5EA /* Products */,
+				F60520FE27DE512400F3A5EA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F60520D127DE502700F3A5EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F60520D027DE502700F3A5EA /* RedRoverPhotos.app */,
+				F60520E027DE502900F3A5EA /* RedRoverPhotosTests.xctest */,
+				F60520EA27DE502900F3A5EA /* RedRoverPhotosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F60520D227DE502700F3A5EA /* RedRoverPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				F605210D27DEEC1500F3A5EA /* Model */,
+				F605210627DEE70900F3A5EA /* Info.plist */,
+				F60520D327DE502700F3A5EA /* RedRoverPhotosApp.swift */,
+				F60520D727DE502900F3A5EA /* Assets.xcassets */,
+				F60520D927DE502900F3A5EA /* Preview Content */,
+				F605210127DEE00200F3A5EA /* View */,
+				F605210227DEE00800F3A5EA /* ViewModel */,
+			);
+			path = RedRoverPhotos;
+			sourceTree = "<group>";
+		};
+		F60520D927DE502900F3A5EA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F60520DA27DE502900F3A5EA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F60520E327DE502900F3A5EA /* RedRoverPhotosTests */ = {
+			isa = PBXGroup;
+			children = (
+				F60520E427DE502900F3A5EA /* RedRoverPhotosTests.swift */,
+			);
+			path = RedRoverPhotosTests;
+			sourceTree = "<group>";
+		};
+		F60520ED27DE502900F3A5EA /* RedRoverPhotosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F60520EE27DE502900F3A5EA /* RedRoverPhotosUITests.swift */,
+				F60520F027DE502900F3A5EA /* RedRoverPhotosUITestsLaunchTests.swift */,
+			);
+			path = RedRoverPhotosUITests;
+			sourceTree = "<group>";
+		};
+		F60520FE27DE512400F3A5EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F605210127DEE00200F3A5EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F60520D527DE502700F3A5EA /* RoverListView.swift */,
+				F605211027DEEDDF00F3A5EA /* RoverRowView.swift */,
+				F605211427DEFA7C00F3A5EA /* RoverDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F605210227DEE00800F3A5EA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F605210B27DEE7E600F3A5EA /* CameraPhotoListViewModel.swift */,
+				F605210727DEE7AF00F3A5EA /* RoverViewListViewModel.swift */,
+				F605210927DEE7C000F3A5EA /* RoverViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F605210D27DEEC1500F3A5EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F605210E27DEEC3000F3A5EA /* Rovers.swift */,
+				F605211227DEF90100F3A5EA /* RedRoverAPIClient+Creation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F60520CF27DE502700F3A5EA /* RedRoverPhotos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F60520F427DE502900F3A5EA /* Build configuration list for PBXNativeTarget "RedRoverPhotos" */;
+			buildPhases = (
+				F60520CC27DE502700F3A5EA /* Sources */,
+				F60520CD27DE502700F3A5EA /* Frameworks */,
+				F60520CE27DE502700F3A5EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RedRoverPhotos;
+			packageProductDependencies = (
+				F60520FF27DE512400F3A5EA /* RedRoverAPI */,
+				F605211727DEFF6100F3A5EA /* Cache */,
+			);
+			productName = RedRoverPhotos;
+			productReference = F60520D027DE502700F3A5EA /* RedRoverPhotos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F60520DF27DE502900F3A5EA /* RedRoverPhotosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F60520F727DE502900F3A5EA /* Build configuration list for PBXNativeTarget "RedRoverPhotosTests" */;
+			buildPhases = (
+				F60520DC27DE502900F3A5EA /* Sources */,
+				F60520DD27DE502900F3A5EA /* Frameworks */,
+				F60520DE27DE502900F3A5EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F60520E227DE502900F3A5EA /* PBXTargetDependency */,
+			);
+			name = RedRoverPhotosTests;
+			productName = RedRoverPhotosTests;
+			productReference = F60520E027DE502900F3A5EA /* RedRoverPhotosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F60520E927DE502900F3A5EA /* RedRoverPhotosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F60520FA27DE502900F3A5EA /* Build configuration list for PBXNativeTarget "RedRoverPhotosUITests" */;
+			buildPhases = (
+				F60520E627DE502900F3A5EA /* Sources */,
+				F60520E727DE502900F3A5EA /* Frameworks */,
+				F60520E827DE502900F3A5EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F60520EC27DE502900F3A5EA /* PBXTargetDependency */,
+			);
+			name = RedRoverPhotosUITests;
+			productName = RedRoverPhotosUITests;
+			productReference = F60520EA27DE502900F3A5EA /* RedRoverPhotosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F60520C827DE502700F3A5EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F60520CF27DE502700F3A5EA = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F60520DF27DE502900F3A5EA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F60520CF27DE502700F3A5EA;
+					};
+					F60520E927DE502900F3A5EA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F60520CF27DE502700F3A5EA;
+					};
+				};
+			};
+			buildConfigurationList = F60520CB27DE502700F3A5EA /* Build configuration list for PBXProject "RedRoverPhotos" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F60520C727DE502700F3A5EA;
+			packageReferences = (
+				F605211627DEFF6100F3A5EA /* XCRemoteSwiftPackageReference "Cache" */,
+			);
+			productRefGroup = F60520D127DE502700F3A5EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F60520CF27DE502700F3A5EA /* RedRoverPhotos */,
+				F60520DF27DE502900F3A5EA /* RedRoverPhotosTests */,
+				F60520E927DE502900F3A5EA /* RedRoverPhotosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F60520CE27DE502700F3A5EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F60520DB27DE502900F3A5EA /* Preview Assets.xcassets in Resources */,
+				F60520D827DE502900F3A5EA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60520DE27DE502900F3A5EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60520E827DE502900F3A5EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F60520CC27DE502700F3A5EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F60520D627DE502700F3A5EA /* RoverListView.swift in Sources */,
+				F605211527DEFA7C00F3A5EA /* RoverDetailView.swift in Sources */,
+				F605210C27DEE7E600F3A5EA /* CameraPhotoListViewModel.swift in Sources */,
+				F605211327DEF90100F3A5EA /* RedRoverAPIClient+Creation.swift in Sources */,
+				F605210F27DEEC3000F3A5EA /* Rovers.swift in Sources */,
+				F605211127DEEDDF00F3A5EA /* RoverRowView.swift in Sources */,
+				F605210A27DEE7C000F3A5EA /* RoverViewModel.swift in Sources */,
+				F60520D427DE502700F3A5EA /* RedRoverPhotosApp.swift in Sources */,
+				F605210827DEE7AF00F3A5EA /* RoverViewListViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60520DC27DE502900F3A5EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F60520E527DE502900F3A5EA /* RedRoverPhotosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60520E627DE502900F3A5EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F60520F127DE502900F3A5EA /* RedRoverPhotosUITestsLaunchTests.swift in Sources */,
+				F60520EF27DE502900F3A5EA /* RedRoverPhotosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F60520E227DE502900F3A5EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F60520CF27DE502700F3A5EA /* RedRoverPhotos */;
+			targetProxy = F60520E127DE502900F3A5EA /* PBXContainerItemProxy */;
+		};
+		F60520EC27DE502900F3A5EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F60520CF27DE502700F3A5EA /* RedRoverPhotos */;
+			targetProxy = F60520EB27DE502900F3A5EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F60520F227DE502900F3A5EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F60520F327DE502900F3A5EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F60520F527DE502900F3A5EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RedRoverPhotos/Preview Content\"";
+				DEVELOPMENT_TEAM = J7N8DS9N3Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RedRoverPhotos/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.donmowry.RedRoverPhotos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F60520F627DE502900F3A5EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RedRoverPhotos/Preview Content\"";
+				DEVELOPMENT_TEAM = J7N8DS9N3Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RedRoverPhotos/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.donmowry.RedRoverPhotos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F60520F827DE502900F3A5EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J7N8DS9N3Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.donmowry.RedRoverPhotosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedRoverPhotos.app/RedRoverPhotos";
+			};
+			name = Debug;
+		};
+		F60520F927DE502900F3A5EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J7N8DS9N3Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.donmowry.RedRoverPhotosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedRoverPhotos.app/RedRoverPhotos";
+			};
+			name = Release;
+		};
+		F60520FB27DE502900F3A5EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J7N8DS9N3Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.donmowry.RedRoverPhotosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RedRoverPhotos;
+			};
+			name = Debug;
+		};
+		F60520FC27DE502900F3A5EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J7N8DS9N3Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.donmowry.RedRoverPhotosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RedRoverPhotos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F60520CB27DE502700F3A5EA /* Build configuration list for PBXProject "RedRoverPhotos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F60520F227DE502900F3A5EA /* Debug */,
+				F60520F327DE502900F3A5EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F60520F427DE502900F3A5EA /* Build configuration list for PBXNativeTarget "RedRoverPhotos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F60520F527DE502900F3A5EA /* Debug */,
+				F60520F627DE502900F3A5EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F60520F727DE502900F3A5EA /* Build configuration list for PBXNativeTarget "RedRoverPhotosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F60520F827DE502900F3A5EA /* Debug */,
+				F60520F927DE502900F3A5EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F60520FA27DE502900F3A5EA /* Build configuration list for PBXNativeTarget "RedRoverPhotosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F60520FB27DE502900F3A5EA /* Debug */,
+				F60520FC27DE502900F3A5EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F605211627DEFF6100F3A5EA /* XCRemoteSwiftPackageReference "Cache" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hyperoslo/Cache.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F60520FF27DE512400F3A5EA /* RedRoverAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RedRoverAPI;
+		};
+		F605211727DEFF6100F3A5EA /* Cache */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F605211627DEFF6100F3A5EA /* XCRemoteSwiftPackageReference "Cache" */;
+			productName = Cache;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F60520C827DE502700F3A5EA /* Project object */;
+}
