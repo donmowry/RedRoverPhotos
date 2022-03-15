@@ -8,9 +8,10 @@ import Foundation
 @available(iOS 15.0.0, *)
 public class RedRoverAPIClient: ObservableObject {
     public enum APIError: Error {
-        case dataFetchError(Error)
+        case dataFetchError(Error?)
         case incorrectURL(String)
         case queryItemError(String)
+        case serverError(ServerMessageError)
     }
     private static let baseURL = "https://api.nasa.gov/mars-photos/api/v1/"
     
@@ -35,14 +36,19 @@ public class RedRoverAPIClient: ObservableObject {
                     return .failure(.queryItemError("api_key"))
                 }
         
+        guard let (data, _) = try? await urlSession.data(from: url) else {
+            return .failure(.dataFetchError(nil))
+        }
         do {
-            let (data, _) = try await urlSession.data(from: url)
             let parser = Parser<PhotoManifestWrapper>()
             let manifestWrapper = try parser.parseObject(jsonData: data)
             return .success(manifestWrapper.photoManifest)
         }
         catch {
-            print(error)
+            let errorParser = Parser<ServerMessageErrorWrapper>()
+            if let errorWrapper = try? errorParser.parseObject(jsonData: data) {
+                return .failure(.serverError(errorWrapper.error))
+            }
             return .failure(.dataFetchError(error))
         }
     }
@@ -63,13 +69,19 @@ public class RedRoverAPIClient: ObservableObject {
                     return .failure(.queryItemError("api_key, sol, or camera"))
                 }
         
+        guard let (data, _) = try? await urlSession.data(from: url) else {
+            return .failure(.dataFetchError(nil))
+        }
         do {
-            let (data, _) = try await urlSession.data(from: url)
             let parser = Parser<PhotosWrapper>()
             let photoWrapper = try parser.parseObject(jsonData: data)
             return .success(photoWrapper.photos)
         }
         catch {
+            let errorParser = Parser<ServerMessageErrorWrapper>()
+            if let errorWrapper = try? errorParser.parseObject(jsonData: data) {
+                return .failure(.serverError(errorWrapper.error))
+            }
             return .failure(.dataFetchError(error))
         }
     }

@@ -37,6 +37,7 @@ struct RoverDetailView: View {
                     Spacer()
                 }
             }
+            .redacted(reason: viewModel.hasData ? [] : .placeholder)
             .padding(.leading)
             List {
                 ForEach(viewModel.photos, id: \.sol) { manifestPhotoEntry in
@@ -57,6 +58,11 @@ struct RoverDetailView: View {
         .task {
             await viewModel.refresh()
         }
+        .alert("Error", isPresented: viewModel.isPresentingAlert,
+               actions: {},
+               message: {
+            Text(viewModel.errorMessage ?? "There was a problem fetching data")
+        })
     }
 }
 

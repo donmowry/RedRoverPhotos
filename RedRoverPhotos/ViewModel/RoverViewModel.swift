@@ -16,6 +16,20 @@ class RoverViewModel: ObservableObject {
     
     @Published var photoManifest: PhotoManifest = PhotoManifest.empty
     @Published var photos = [ManifestPhotoEntry]()
+    @Published var hasData: Bool = false
+    @Published var errorMessage: String? = nil
+    
+    var isPresentingAlert: Binding<Bool> {
+        Binding<Bool>(get: {
+            self.errorMessage != nil
+        }, set: { newValue in
+            guard !newValue else {
+                return
+            }
+            self.errorMessage = nil
+        })
+    }
+
     
     static private var cache: Storage<String, PhotoManifest> = {
         let diskConfig = DiskConfig(name: "PhotoManifest",
@@ -38,6 +52,7 @@ class RoverViewModel: ObservableObject {
         self.apiClient = apiClient
         if let cachedManifest = try? Self.cache.object(forKey: rover.rawValue) {
             self.photoManifest = cachedManifest
+            self.hasData = true
             self.set(photos: cachedManifest.photos)
         }
     }
@@ -53,10 +68,23 @@ class RoverViewModel: ObservableObject {
         switch manifestResult {
         case .success(let photoManifest):
             self.photoManifest = photoManifest
+            self.hasData = true
             self.set(photos: photoManifest.photos)
             try? Self.cache.setObject(photoManifest, forKey: rover.rawValue)
         case .failure(let error):
-            print(error)
+            switch error {
+            case .serverError(let serverMessageError):
+                errorMessage = serverMessageError.message
+            case .dataFetchError(let internalError):
+                errorMessage = "There was a problem fetching data"
+                if let internalError = internalError {
+                    errorMessage = internalError.localizedDescription
+                }
+            case .incorrectURL(let url):
+                errorMessage = "There was a problem with the url: \(url)"
+            case .queryItemError(let queryItem):
+                errorMessage = "There was a problem with the queryItem: \(queryItem)"
+            }
             return
         }
     }
