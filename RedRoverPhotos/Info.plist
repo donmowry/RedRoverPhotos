@@ -4,5 +4,20 @@
 <dict>
 	<key>API_KEY</key>
 	<string>$(NASA_API_KEY:default=DEMO_KEY)</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>nasa.gov</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -15,6 +15,7 @@ class RoverViewModel: ObservableObject {
     let rover: Rovers
     
     @Published var photoManifest: PhotoManifest = PhotoManifest.empty
+    @Published var photos = [ManifestPhotoEntry]()
     
     static private var cache: Storage<String, PhotoManifest> = {
         let diskConfig = DiskConfig(name: "PhotoManifest",
@@ -22,22 +23,28 @@ class RoverViewModel: ObservableObject {
         let memoryConfig = MemoryConfig(countLimit: 3, totalCostLimit: 0)
         
         do {
-          return try Storage<String, PhotoManifest>(
-            diskConfig: diskConfig,
-            memoryConfig: memoryConfig,
-            transformer: TransformerFactory.forCodable(ofType: PhotoManifest.self)
-          )
+            return try Storage<String, PhotoManifest>(
+                diskConfig: diskConfig,
+                memoryConfig: memoryConfig,
+                transformer: TransformerFactory.forCodable(ofType: PhotoManifest.self)
+            )
         } catch {
-          fatalError(error.localizedDescription)
+            fatalError(error.localizedDescription)
         }
-      }()
+    }()
     
     init(rover: Rovers, apiClient: RedRoverAPIClient) {
         self.rover = rover
         self.apiClient = apiClient
-        if let cachedManifest = try? RoverViewModel.cache.object(forKey: rover.rawValue) {
+        if let cachedManifest = try? Self.cache.object(forKey: rover.rawValue) {
             self.photoManifest = cachedManifest
+            self.set(photos: cachedManifest.photos)
         }
+    }
+    
+    private func set(photos: [ManifestPhotoEntry]) {
+        self.photos = photos.sorted(by: { $0.sol > $1.sol })
+        
     }
     
     func refresh() async {
@@ -46,7 +53,8 @@ class RoverViewModel: ObservableObject {
         switch manifestResult {
         case .success(let photoManifest):
             self.photoManifest = photoManifest
-            try? RoverViewModel.cache.setObject(photoManifest, forKey: rover.rawValue)
+            self.set(photos: photoManifest.photos)
+            try? Self.cache.setObject(photoManifest, forKey: rover.rawValue)
         case .failure(let error):
             print(error)
             return

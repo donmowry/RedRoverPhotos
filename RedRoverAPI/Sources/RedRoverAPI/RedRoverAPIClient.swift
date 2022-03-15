@@ -52,7 +52,9 @@ public class RedRoverAPIClient: ObservableObject {
             return .failure(.incorrectURL(RedRoverAPIClient.baseURL))
         }
         
-        guard let url = baseURL.appendingPathComponent("photos")
+        guard let url = baseURL.appendingPathComponent("rovers")
+                .appendingPathComponent("\(rover.rawValue.lowercased())")
+                .appendingPathComponent("photos")
                 .appending(queryItems: [
                     URLQueryItem(name: "api_key", value: apiKey),
                     URLQueryItem(name: "sol", value: String(sol)),

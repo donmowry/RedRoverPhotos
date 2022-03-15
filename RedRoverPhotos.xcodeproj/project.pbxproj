@@ -23,6 +23,13 @@
 		F605211327DEF90100F3A5EA /* RedRoverAPIClient+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F605211227DEF90100F3A5EA /* RedRoverAPIClient+Creation.swift */; };
 		F605211527DEFA7C00F3A5EA /* RoverDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F605211427DEFA7C00F3A5EA /* RoverDetailView.swift */; };
 		F605211827DEFF6100F3A5EA /* Cache in Frameworks */ = {isa = PBXBuildFile; productRef = F605211727DEFF6100F3A5EA /* Cache */; };
+		F619117727E000F1008D8F59 /* RoverSolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F619117627E000F1008D8F59 /* RoverSolView.swift */; };
+		F619117927E00178008D8F59 /* ManifestPhotoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F619117827E00178008D8F59 /* ManifestPhotoRow.swift */; };
+		F619117F27E05336008D8F59 /* View+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F619117E27E05336008D8F59 /* View+Modifiers.swift */; };
+		F619118127E061E6008D8F59 /* CameraPhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F619118027E061E6008D8F59 /* CameraPhotoListView.swift */; };
+		F619118327E064AC008D8F59 /* Photo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F619118227E064AC008D8F59 /* Photo+Extensions.swift */; };
+		F619118727E067A7008D8F59 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F619118627E067A7008D8F59 /* RemoteImage.swift */; };
+		F619118927E06AB0008D8F59 /* RemoteImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F619118827E06AB0008D8F59 /* RemoteImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +69,13 @@
 		F605211027DEEDDF00F3A5EA /* RoverRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverRowView.swift; sourceTree = "<group>"; };
 		F605211227DEF90100F3A5EA /* RedRoverAPIClient+Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RedRoverAPIClient+Creation.swift"; sourceTree = "<group>"; };
 		F605211427DEFA7C00F3A5EA /* RoverDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverDetailView.swift; sourceTree = "<group>"; };
+		F619117627E000F1008D8F59 /* RoverSolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverSolView.swift; sourceTree = "<group>"; };
+		F619117827E00178008D8F59 /* ManifestPhotoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestPhotoRow.swift; sourceTree = "<group>"; };
+		F619117E27E05336008D8F59 /* View+Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Modifiers.swift"; sourceTree = "<group>"; };
+		F619118027E061E6008D8F59 /* CameraPhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoListView.swift; sourceTree = "<group>"; };
+		F619118227E064AC008D8F59 /* Photo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+Extensions.swift"; sourceTree = "<group>"; };
+		F619118627E067A7008D8F59 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		F619118827E06AB0008D8F59 /* RemoteImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +176,14 @@
 		F605210127DEE00200F3A5EA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F619118027E061E6008D8F59 /* CameraPhotoListView.swift */,
+				F619117827E00178008D8F59 /* ManifestPhotoRow.swift */,
+				F619118627E067A7008D8F59 /* RemoteImage.swift */,
+				F605211427DEFA7C00F3A5EA /* RoverDetailView.swift */,
 				F60520D527DE502700F3A5EA /* RoverListView.swift */,
 				F605211027DEEDDF00F3A5EA /* RoverRowView.swift */,
-				F605211427DEFA7C00F3A5EA /* RoverDetailView.swift */,
+				F619117627E000F1008D8F59 /* RoverSolView.swift */,
+				F619117E27E05336008D8F59 /* View+Modifiers.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				F605210B27DEE7E600F3A5EA /* CameraPhotoListViewModel.swift */,
+				F619118827E06AB0008D8F59 /* RemoteImageModel.swift */,
 				F605210727DEE7AF00F3A5EA /* RoverViewListViewModel.swift */,
 				F605210927DEE7C000F3A5EA /* RoverViewModel.swift */,
 			);
@@ -184,6 +204,7 @@
 			children = (
 				F605210E27DEEC3000F3A5EA /* Rovers.swift */,
 				F605211227DEF90100F3A5EA /* RedRoverAPIClient+Creation.swift */,
+				F619118227E064AC008D8F59 /* Photo+Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,14 +347,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F60520D627DE502700F3A5EA /* RoverListView.swift in Sources */,
+				F619118127E061E6008D8F59 /* CameraPhotoListView.swift in Sources */,
+				F619118327E064AC008D8F59 /* Photo+Extensions.swift in Sources */,
 				F605211527DEFA7C00F3A5EA /* RoverDetailView.swift in Sources */,
 				F605210C27DEE7E600F3A5EA /* CameraPhotoListViewModel.swift in Sources */,
+				F619118927E06AB0008D8F59 /* RemoteImageModel.swift in Sources */,
 				F605211327DEF90100F3A5EA /* RedRoverAPIClient+Creation.swift in Sources */,
 				F605210F27DEEC3000F3A5EA /* Rovers.swift in Sources */,
 				F605211127DEEDDF00F3A5EA /* RoverRowView.swift in Sources */,
 				F605210A27DEE7C000F3A5EA /* RoverViewModel.swift in Sources */,
+				F619117F27E05336008D8F59 /* View+Modifiers.swift in Sources */,
+				F619118727E067A7008D8F59 /* RemoteImage.swift in Sources */,
 				F60520D427DE502700F3A5EA /* RedRoverPhotosApp.swift in Sources */,
 				F605210827DEE7AF00F3A5EA /* RoverViewListViewModel.swift in Sources */,
+				F619117927E00178008D8F59 /* ManifestPhotoRow.swift in Sources */,
+				F619117727E000F1008D8F59 /* RoverSolView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

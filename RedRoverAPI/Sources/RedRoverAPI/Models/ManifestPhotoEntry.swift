@@ -12,4 +12,10 @@ import Foundation
     public var earthDate: Date
     public var totalPhotos: Int
     public var cameras: [Cameras]
+    
+    public static let empty = ManifestPhotoEntry(sol: 0,
+                                                 earthDate: Date.distantFuture,
+                                                 totalPhotos: 0,
+                                                 cameras: [])
+
 }

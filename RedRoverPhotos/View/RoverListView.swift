@@ -22,7 +22,7 @@ struct RoverListView: View {
                         .listRowSeparator(.hidden)
                 }
             }
-            .navigationTitle("Mars Rovers")
+            .navigationBarTitle("Mars Rovers", displayMode: .large)
         }
     }
 }
